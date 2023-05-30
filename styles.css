@@ -5,7 +5,11 @@
   body {
     overflow-x: hidden;
     margin: 0;
-    font-family: "Euclid Circular A", "Poppins";
+    font-family:"Dosis";
+  }
+  .header1, .header2, .header3, .header4{
+    font-family: "Quicksand";
+    text-align: center;
   }
   
   .banner {
@@ -34,7 +38,7 @@
   }
   
   .banner h2 {
-    margin: 0 0 10px;
+    margin:0 0 6px;
     font-size: 60px;
     color: rgb(255 255 255 / 80%);
   }
@@ -45,13 +49,9 @@
     color: rgb(255 255 255 / 60%);
   }
   
-  main {
-    padding: 50px 10%;
-  }
-  
-  main p {
-    margin: 0 0 60px;
-    opacity: 0.6;
+  p {
+    margin-top:2.5em;
+    opacity: 0.9;
     line-height: 1.5;
   }
   
@@ -64,4 +64,49 @@
     width: 65vw;
     height: auto;
     filter: grayscale(0.86);
+  }
+  #About, #Skills, #Experience, #Contact {
+    margin: auto;
+    margin-bottom: 150px 0 150px 0;
+    padding: 50px 10%;
+    height: 550px;
+  }
+  #About{
+    padding-top: 100px;
+  }
+  #Skills{
+    background-color: #F7F7F7;
+    color: rgb(0, 0, 0);
+  }
+  #Experience{
+    background-color: #CEEDC7;
+    color: #070000;
+  }
+  #Contact{
+    background-color: #2E4F4F;
+    color: #F7F7F7;
+  }
+  .contact{
+    display: flex;
+    justify-content: space-between;
+  }
+  .input1 {
+    background-color: #212b2a;
+    display: grid;
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    /* text-align: center; */
+    border: 2px solid white;
+    border-radius: 5px;
+    /* box-shadow: 3px 3px 2px rgb(249, 255, 85); */
+  }
+  
+  .input1:focus {
+    color: rgb(250, 253, 253);
+    background-color: #212121;
+    outline-color: rgb(59, 221, 221);
+    box-shadow: -3px -3px 15px rgb(0, 255, 255);
+    transition: .2s ease-in-out;
+    transition-property: box-shadow;
   }
