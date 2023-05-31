@@ -65,11 +65,11 @@
     height: auto;
     filter: grayscale(0.86);
   }
-  #About, #Skills, #Experience, #Contact {
+  #About, #Skills, #Experience,#Contact {
     margin: auto;
     margin-bottom: 150px 0 150px 0;
     padding: 50px 10%;
-    height: 550px;
+    height: 600px;
   }
   #About{
     padding-top: 100px;
@@ -84,22 +84,22 @@
   }
   #Contact{
     background-color: #2E4F4F;
-    color: #F7F7F7;
+    color: wheat;
   }
-  .contact{
-    display: flex;
-    justify-content: space-between;
+  #Contact p{
+    padding: 0%;
+    margin: 0%;
   }
   .input1 {
     background-color: #212b2a;
-    display: grid;
-    width: 100%;
     height: 40px;
+    width: 100%;
+    margin-top: .5em;
+    margin-top: .7em;
     padding: 10px;
     /* text-align: center; */
     border: 2px solid white;
     border-radius: 5px;
-    /* box-shadow: 3px 3px 2px rgb(249, 255, 85); */
   }
   
   .input1:focus {
@@ -110,3 +110,153 @@
     transition: .2s ease-in-out;
     transition-property: box-shadow;
   }
+  textarea:focus{
+    color: rgb(250, 253, 253);
+    background-color: #212121;
+    outline-color: rgb(59, 221, 221);
+    box-shadow: -3px -3px 15px rgb(0, 255, 255);
+    transition: .2s ease-in-out;
+    transition-property: box-shadow;
+  }
+  a {
+    text-decoration: none;
+    color: #F7F7F7;
+  }
+  textarea{
+    background-color:#212121 ;
+    color: beige;
+    display: block;
+    border: 2px solid white;
+    border-radius: 5px;
+    height: 10em;
+    margin-top: .7em;
+    width: 100%;
+  }
+  .form1{
+    float: left;
+    width: 50%;
+  }
+  .row1{
+    float: left;
+    width: 50%;
+  }
+  .footer{
+    display: flex;
+    gap: .5em;
+    transition: .3s;
+  }
+  .footer a:hover{
+    color: aquamarine;
+  }
+  i{
+    font-size: large;
+  }
+  button,
+button::after {
+  border-radius: 10px;
+ padding: 16px 20px;
+ font-size: 14px;
+ background: linear-gradient(45deg, transparent 5%, #6D9886 5%);
+ border: 0;
+ color: #2c2323;
+ letter-spacing: 1px;
+ line-height: 1;
+ box-shadow: 6px 0px 4px #00e6f6;
+ outline: transparent;
+ position: relative;
+}
+
+button::after {
+ --slice-0: inset(50% 50% 50% 50%);
+ --slice-1: inset(80% -6px 0 0);
+ --slice-2: inset(50% -6px 30% 0);
+ --slice-3: inset(10% -6px 85% 0);
+ --slice-4: inset(40% -6px 43% 0);
+ --slice-5: inset(80% -6px 5% 0);
+ content: "Hit me up";
+ display: block;
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background: linear-gradient(45deg, transparent 3%, #00e6f6 3%, #00e6f6 5%, #6D9886 5%);
+ text-shadow: -3px -3px 0px #34c8ec, 3px 3px 0px #00e6f6;
+ clip-path: var(--slice-0);
+}
+
+button:hover::after {
+ animation: 1s glitch;
+ animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+ 0% {
+  clip-path: var(--slice-1);
+  transform: translate(-20px, -10px);
+ }
+
+ 10% {
+  clip-path: var(--slice-3);
+  transform: translate(10px, 10px);
+ }
+
+ 20% {
+  clip-path: var(--slice-1);
+  transform: translate(-10px, 10px);
+ }
+
+ 30% {
+  clip-path: var(--slice-3);
+  transform: translate(0px, 5px);
+ }
+
+ 40% {
+  clip-path: var(--slice-2);
+  transform: translate(-5px, 0px);
+ }
+
+ 50% {
+  clip-path: var(--slice-3);
+  transform: translate(5px, 0px);
+ }
+
+ 60% {
+  clip-path: var(--slice-4);
+  transform: translate(5px, 10px);
+ }
+
+ 70% {
+  clip-path: var(--slice-2);
+  transform: translate(-10px, 10px);
+ }
+
+ 80% {
+  clip-path: var(--slice-5);
+  transform: translate(20px, -10px);
+ }
+
+ 90% {
+  clip-path: var(--slice-1);
+  transform: translate(-10px, 0px);
+ }
+
+ 100% {
+  clip-path: var(--slice-1);
+  transform: translate(0);
+ }
+}
+  @media screen and (max-width: 768px){
+    .row1, .form1{
+      width: 100%;
+      display: block;
+      margin-top: 1em;
+    }
+    .input1 , textarea{
+      width: 100%;
+    }
+    #Contact{
+      height: 750px;
+    }
+  }
+    
