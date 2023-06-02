@@ -142,7 +142,7 @@
   }
   .footer{
     display: flex;
-    gap: .5em;
+    gap: .8em;
     transition: .3s;
   }
   .footer a:hover{
